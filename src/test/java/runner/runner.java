@@ -10,6 +10,5 @@ import org.junit.runner.RunWith;
         glue = "steps"
 )
 
-public class runner {
-
+public class runner{
 }

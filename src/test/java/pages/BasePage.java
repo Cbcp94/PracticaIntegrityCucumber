@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,4 +50,18 @@ public class BasePage {
     public void close() {
         driver.close();
     }
+
+    public String obtenerTitulo() {
+        return (driver.getTitle());
+    }
+
+    public void comparar(String titulo, String texto) {
+        Assert.assertEquals(titulo,texto);
+    }
+
+    public String obtenerTextoObjeto(String locator){
+        return elemento(locator).getText();
+    }
+
+
 }
